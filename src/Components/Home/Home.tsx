@@ -1,13 +1,16 @@
 import Styles from './Home.module.css'
 import Comments from '../Comments/Comments';
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export default function Home() {
 
-    let imageContainer;
+    const [imageContainer, setImageContainer] = useState<HTMLDivElement>();
 
     useLayoutEffect(()=>{
-        imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
+        const getDiv = document.querySelector(`.${Styles.imagesContainer}`) as HTMLDivElement;
+        if(getDiv){
+            setImageContainer(getDiv)
+        }
     },[])
 
     useEffect(()=>{
