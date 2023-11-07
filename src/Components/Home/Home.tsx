@@ -14,6 +14,7 @@ export default function Home() {
     },[])
 
     useEffect(()=>{
+        console.log(imageContainer);
         handleCarousel();
     },[imageContainer])
 
@@ -21,6 +22,7 @@ export default function Home() {
         
         if (imageContainer) {
             const images = Array.from(imageContainer.querySelectorAll('img')) as HTMLImageElement[];
+            console.log('images', images)
             let currentIndex = 0;
 
             function updateSlider() {
