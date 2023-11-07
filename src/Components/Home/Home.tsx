@@ -6,9 +6,10 @@ export default function Home() {
 
     let imageContainer;
 
-    window.onload = function() {
-      imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
-    };
+    useEffect(() => {
+  
+  imageContainer = document.getElementById("myImagesContainer");
+}, []);
 
     useEffect(()=>{
         console.log(imageContainer);
@@ -47,7 +48,7 @@ export default function Home() {
 
     return (
         <div className={Styles.divMayor}>
-            <div className={Styles.imagesContainer}>
+            <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='image1' />
                 <img src='/assets/images/camioneta.webp' alt='image2' />
                 <img src='/assets/images/camioneta-abierta.webp' alt='image3' />
