@@ -6,9 +6,19 @@ export default function Home() {
 
     let imageContainer;
 
-    useEffect(()=>{
-        imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
-    },[])
+    useEffect(() => {
+  const handleDOMLoaded = () => {
+    imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
+  };
+
+  // Agregar un listener para el evento 'DOMContentLoaded'
+  document.addEventListener('DOMContentLoaded', handleDOMLoaded);
+
+  // Limpia el listener cuando el componente se desmonta
+  return () => {
+    document.removeEventListener('DOMContentLoaded', handleDOMLoaded);
+  };
+}, []);
 
     useEffect(()=>{
         console.log(imageContainer);
