@@ -1,0 +1,113 @@
+.divMayor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background:rgba(255, 255, 255, 0.6);
+    padding-bottom: 1rem;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.commentContainer {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-radius: 10px 0px 0px 0px;    
+    background-color: white;
+    border: 1px black solid;
+    overflow: scroll;
+    width: 93%;
+    height: 300px;
+}
+
+.oneComment{
+    width: 90%;
+    padding-left: 1rem;
+    border-bottom: 1px dashed black
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+.loadingContainer {
+    align-content: center;
+    justify-content: center;
+    padding-left: 2rem;
+}
+.sinComentarios {
+    margin-left: 1rem;
+    align-content: center;
+}
+
+.formDivs{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.formDivs label{
+    width: 97%;
+    padding-right: 1rem;
+}
+.formDivs input{
+    background-color: white;
+    width: 97%;
+}
+.formDivs textarea{
+    background-color: white;
+    width: 97%;
+    height: 200px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.submitButton{
+    margin-left: 40%;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+
+.loadingSpinner {
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    margin-left: 13%;
+    margin-top: 10%;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    transform: translate(-50%, -50%);
+}
+.loadingContainer p{
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-device-width: 768px) and (orientation: portrait){
+    .divMayor{
+        width: 100vw;
+        margin-left: 0;
+    }
+    .commentContainer{
+        width: 90vw;
+    }
+
+}
