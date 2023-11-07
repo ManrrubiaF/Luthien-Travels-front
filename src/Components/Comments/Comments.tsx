@@ -35,8 +35,9 @@ export default function Comments() {
             const response = await axios.get(`${BACK_URL}/comments`)
             if (response && response.data) {
                 setComents(response.data)
-                setIsLoadding(false)
+                
             }
+            setIsLoadding(false)
 
         } catch (error: any) {
             console.error(error.response.data)
