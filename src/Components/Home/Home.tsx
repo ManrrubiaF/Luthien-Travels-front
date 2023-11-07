@@ -1,18 +1,20 @@
 import Styles from './Home.module.css'
 import Comments from '../Comments/Comments';
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
 
     let imageContainer;
 
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
     },[])
 
     useEffect(()=>{
         console.log(imageContainer);
-        handleCarousel();
+        if(imageContainer !== null){
+            handleCarousel();
+        }
     },[imageContainer])
 
     const handleCarousel = () => {
