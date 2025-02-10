@@ -26,22 +26,37 @@ export default function Comments() {
     });
     const maxCharCount = 255;
 
+
     useEffect(() => {
-        getComments();
+        if(CommentsArray.length >= 0){           
+            getComments();
+        }
     }, [])
 
     const getComments = async () => {
         try {
             const response = await axios.get(`${BACK_URL}/comments`)
-            if (response && response.data) {
-                setComents(response.data)
+            console.log("respuesta",response)
+            if (response?.data) {
+                const coments = response.data
+                setComents(coments)
                 setIsLoadding(false)
+            }else{
+                console.log("sin respuesta")
             }
 
         } catch (error: any) {
-            console.error(error.response.data)
+            console.error(error)
         }
     }
+
+    useEffect(() => {
+        if(CommentsArray.length === 1 && (CommentsArray[0].text === "" )){
+            setIsLoadding(false)
+        }
+    },[CommentsArray])
+
+
     const validation = () => {
         const error = {} as typeof errors;
         if (Data.name.length < 1) {
