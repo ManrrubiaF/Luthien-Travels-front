@@ -57,6 +57,10 @@ export default function Comments() {
     },[CommentsArray])
 
 
+    useEffect(() => {
+        if(CommentsArray.length > 0 : CommentsArray == []){
+            setIsLoadding(false)
+    },[CommentsArray])
     const validation = () => {
         const error = {} as typeof errors;
         if (Data.name.length < 1) {
