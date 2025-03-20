@@ -57,10 +57,6 @@ export default function Comments() {
     },[CommentsArray])
 
 
-    useEffect(() => {
-        if(CommentsArray.length > 0 : CommentsArray == []){
-            setIsLoadding(false)
-    },[CommentsArray])
     const validation = () => {
         const error = {} as typeof errors;
         if (Data.name.length < 1) {
@@ -160,13 +156,17 @@ export default function Comments() {
                 <button className={Styles.submitButton} type="submit" disabled={buttonState} >Enviar</button>
 
             </form>
-            {isLoadding && (
+            {isLoadding ? (
                 <div className={Styles.loadingContainer}>
                     <div className={Styles.loadingSpinner}></div>
                     <p>Cargando comentarios...</p>
                 </div>
+            ) : (
+                <div className={Styles.sinComentarios}>
+                    <p>Aun no hay comentarios</p>
+                </div>
             )}
-            {!isLoadding && CommentsArray.length > 0 ? (
+            {!isLoadding &&  (                 
                 <div className={Styles.commentContainer}>
                     {CommentsArray.map((comment) => (
                         <div className={Styles.oneComment} key={comment.id}>
@@ -174,10 +174,6 @@ export default function Comments() {
                             <p>{comment.text}</p>
                         </div>
                     ))}
-                </div>
-            ) : (
-                <div className={Styles.sinComentarios}>
-                    <p>Aun no hay comentarios</p>
                 </div>
             )}
 
