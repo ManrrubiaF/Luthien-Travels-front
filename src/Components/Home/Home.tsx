@@ -1,23 +1,27 @@
 import Styles from './Home.module.css'
 import Comments from '../Comments/Comments';
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
 
     let imageContainer;
 
-    useLayoutEffect(()=>{
-        imageContainer = document.querySelector(`.${Styles.imagesContainer}`);
-    },[])
+    useEffect(() => {
+  
+  imageContainer = document.getElementById("myImagesContainer");
+}, []);
 
     useEffect(()=>{
-        handleCarousel();
+        console.log(imageContainer);
+            handleCarousel();
+        
     },[imageContainer])
 
     const handleCarousel = () => {
         
         if (imageContainer) {
             const images = Array.from(imageContainer.querySelectorAll('img')) as HTMLImageElement[];
+            console.log('images', images)
             let currentIndex = 0;
 
             function updateSlider() {
@@ -44,7 +48,7 @@ export default function Home() {
 
     return (
         <div className={Styles.divMayor}>
-            <div className={Styles.imagesContainer}>
+            <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='image1' />
                 <img src='/assets/images/camioneta.webp' alt='image2' />
                 <img src='/assets/images/camioneta-abierta.webp' alt='image3' />
