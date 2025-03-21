@@ -156,16 +156,12 @@ export default function Comments() {
                 <button className={Styles.submitButton} type="submit" disabled={buttonState} >Enviar</button>
 
             </form>
-            {isLoadding ? (
+            {isLoadding && (
                 <div className={Styles.loadingContainer}>
                     <div className={Styles.loadingSpinner}></div>
                     <p>Cargando comentarios...</p>
                 </div>
-            ) : (
-                <div className={Styles.sinComentarios}>
-                    <p>Aun no hay comentarios</p>
-                </div>
-            )}
+            ) }
             {!isLoadding &&  (                 
                 <div className={Styles.commentContainer}>
                     {CommentsArray.map((comment) => (
