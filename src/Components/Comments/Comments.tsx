@@ -114,6 +114,7 @@ export default function Comments() {
 
             })
             toast.success(response.data)
+            getComments()
         } catch (error: any) {
             toast.error(error.message)
 
