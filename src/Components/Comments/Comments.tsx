@@ -36,6 +36,7 @@ export default function Comments() {
     const getComments = async () => {
         try {
             const response = await axios.get(`${BACK_URL}/comments`)
+
             console.log("respuesta",response)
             if (response?.data) {
                 const coments = response.data
@@ -43,7 +44,9 @@ export default function Comments() {
                 setIsLoadding(false)
             }else{
                 console.log("sin respuesta")
+
             }
+            setIsLoadding(false)
 
         } catch (error: any) {
             console.error(error)

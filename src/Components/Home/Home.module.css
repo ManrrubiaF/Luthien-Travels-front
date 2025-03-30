@@ -34,6 +34,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
+    padding-bottom: 1rem;
 }
 
 
@@ -84,6 +85,10 @@
 
     .imagesContainer {
         margin-left: 1rem;
+    }
+    .whatsappContainer{
+        rigth:1rem;
+        bottom:1rem;
     }
 
     .imagesContainer img {
