@@ -57,15 +57,15 @@ export default function Home() {
             <div className={Styles.allContainer}>
                 <div className={Styles.detailsContainer}>
                     <div className={Styles.detail}>
-                        <h1>¿Quiénes Somos?</h1>
+                        <h2>¿Quiénes Somos?</h2>
                         <p>Somos una empresa dedicada exclusivamente al transporte de mascotas. Nuestra pasión por los animales nos impulsa a brindar un servicio seguro y cómodo para que tus queridos compañeros peludos viajen con tranquilidad, al igual que sus dueños. Por qué dedicarnos al traslado de mascotas de forma exclusiva? Simplemente porque amamos a los animales tanto como seguramente vos lo haces.</p>
                     </div>
                     <div className={Styles.detail}>
-                        <h1>¿Nuestro Propósito?</h1>
+                        <h2>¿Nuestro Propósito?</h2>
                         <p>Nuestro propósito es garantizar que tus mascotas reciban el mejor cuidado durante sus desplazamientos. Nos enorgullece ofrecer un servicio confiable y amigable que se adapta a las necesidades de perros de todas las razas y temperamentos, siempre priorizando su bienestar.</p>
                     </div>
                     <div className={Styles.detail}>
-                        <h1>Lo Que Te Ofrecemos</h1>
+                        <h2>Lo Que Te Ofrecemos</h2>
                         <p>En Luthien Pet Travels, ofrecemos un servicio exclusivo con unidades equipadas con doble puerta lateral y asientos traseros triplaza. Aceptamos perros de todos los tamaños, razas y personalidades, siempre y cuando sean amigables. Para perros que puedan mostrar agresividad, exigimos el uso de correa y bozal por razones de seguridad del conductor.</p>
                     </div>
                 </div>
