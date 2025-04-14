@@ -71,6 +71,10 @@ export default function Home() {
                 </div>
                 <Comments />                
             </div>
+            <footer className={Styles.footer}>
+                <p> Powered by Surenia IT®</p>
+                <p> Buenos Aires - Argentina.</p>
+            </footer>
             <div className={Styles.whatsappContainer}>
                 <a href='https://wa.me/541153365187' target='Blank'><img src='/assets/icons/whatsapp.svg' alt='gmail icon' className={Styles.whatsapp} /></a>
             </div>

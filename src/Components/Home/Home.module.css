@@ -72,6 +72,18 @@
     height: 5rem;
     width: 5rem;
 }
+.footer{
+    width: 100vw;
+    height: fit-content;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer p{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
 
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
     .allContainer {
