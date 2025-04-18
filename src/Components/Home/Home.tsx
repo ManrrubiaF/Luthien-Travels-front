@@ -76,7 +76,7 @@ export default function Home() {
                 <p> Buenos Aires - Argentina.</p>
             </footer>
             <div className={Styles.whatsappContainer}>
-                <a href='https://wa.me/541153365187' target='Blank'><img src='/assets/icons/whatsapp.svg' alt='gmail icon' className={Styles.whatsapp} /></a>
+                <a href='https://wa.me/541170672461' target='Blank'><img src='/assets/icons/whatsapp.svg' alt='whatsapp icon' className={Styles.whatsapp} /></a>
             </div>
         </div>
     )
