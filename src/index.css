@@ -1,15 +1,17 @@
 :root {
   padding: 0;
   margin: 0;
-  width: 100vw;
-  background: linear-gradient(271deg, #000000, #ffd700);
+  width: 100%;
+  background-color: rgb(42, 173, 53);
+
+}
+/*  background: linear-gradient(271deg, #000000, #ffd700);
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 23s ease infinite;
   -moz-animation: AnimationName 23s ease infinite;
   -o-animation: AnimationName 23s ease infinite;
   animation: AnimationName 23s ease infinite;
-}
 
 @-webkit-keyframes AnimationName {
   0% {
@@ -65,7 +67,7 @@
   100% {
     background-position: 0% 41%
   }
-}
+} */
 
 body {
   margin: 0;
@@ -79,6 +81,7 @@ body {
 
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
   body{
-    width: 100vw;
+    width: 100%;
+    
   }
 }

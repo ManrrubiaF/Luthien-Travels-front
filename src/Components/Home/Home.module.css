@@ -87,6 +87,7 @@
 
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
     .allContainer {
+        width: 100vw;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         
@@ -102,6 +103,7 @@
         width: 100vw;
         flex-direction: column;
         margin: 0 !important;
+        justify-content: center;
     }
 
     .imagesContainer {
