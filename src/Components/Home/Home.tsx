@@ -58,7 +58,7 @@ export default function Home() {
                 <div className={Styles.detailsContainer}>
                     <div className={Styles.detail}>
                         <h2>¿Quiénes Somos?</h2>
-                        <p>Somos una empresa dedicada exclusivamente al transporte de mascotas. Nuestra pasión por los animales nos impulsa a brindar un servicio seguro y cómodo para que tus queridos compañeros peludos viajen con tranquilidad, al igual que sus dueños. Por qué dedicarnos al traslado de mascotas de forma exclusiva? Simplemente porque amamos a los animales tanto como seguramente vos lo haces.</p>
+                        <p>Nos dedicamos de forma exclusiva al traslado de mascotas. Nuestra pasión por los animales nos impulsa a brindar un servicio seguro y cómodo para que tus queridos compañeros peludos viajen con tranquilidad, al igual que sus dueños. Por qué dedicarnos al traslado de mascotas de forma exclusiva? Simplemente porque amamos a los animales tanto como seguramente vos lo haces.</p>
                     </div>
                     <div className={Styles.detail}>
                         <h2>¿Nuestro Propósito?</h2>
