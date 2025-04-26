@@ -17,7 +17,8 @@
     border: 1px black solid;
     overflow: scroll;
     width: 93%;
-    height: 750px;
+    height: fit-content;
+    max-height: 550px;
 }
 
 .oneComment{
