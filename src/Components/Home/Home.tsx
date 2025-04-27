@@ -49,10 +49,10 @@ export default function Home() {
     return (
         <div className={Styles.divMayor}>
             <div id='myImagesContainer' className={Styles.imagesContainer}>
-                <img src='/assets/images/greta.webp' alt='image1' />
-                <img src='/assets/images/camioneta.webp' alt='image2' />
-                <img src='/assets/images/camioneta-abierta.webp' alt='image3' />
-                <img src='/assets/images/camioneta-ab-2.webp' alt='image4' />
+                <img src='/assets/images/greta.webp' alt='perra en camioneta' />
+                <img src='/assets/images/camioneta.webp' alt='unidad de traslado de mascota' />
+                <img src='/assets/images/camioneta-abierta.webp' alt='unidad de traslado perros' />
+                <img src='/assets/images/camioneta-ab-2.webp' alt='perros en camioneta' />
             </div>
             <div className={Styles.allContainer}>
                 <div className={Styles.detailsContainer}>
