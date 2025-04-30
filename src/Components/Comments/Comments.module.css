@@ -36,6 +36,8 @@
     align-content: center;
     justify-content: center;
     padding-left: 2rem;
+    width: 93%;
+    height: fit-content;
 }
 .sinComentarios {
     margin-left: 1rem;
