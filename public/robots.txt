@@ -1,3 +1,5 @@
 # https://www.luthienpettravels.com.ar/robotstxt.html
 User-agent: *
 Disallow:
+
+Sitemap: https://www.luthienpettravels.com.ar/sitemap.xml
