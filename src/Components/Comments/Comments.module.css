@@ -26,6 +26,12 @@
     padding-left: 1rem;
     border-bottom: 1px dashed black
 }
+.nameStyle{
+    text-decoration: dotted;
+}
+.dateStyle{
+    color: green;
+}
 
 .error{
     color: red;
