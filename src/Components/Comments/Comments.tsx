@@ -175,7 +175,9 @@ export default function Comments() {
                 Comentario de{" "}
                 <span className={Styles.nameStyle}>{comment.name}</span>{" "}
                 <span className={Styles.dateStyle}>
-                  {comment.created_at ? comment.created_at.slice(0, 10) : ''}
+                  {comment.created_at
+                    ? new Date(comment.created_at).toLocaleDateString("es-AR")
+                    : ""}
                 </span>
               </h5>
               <p>{comment.text}</p>
