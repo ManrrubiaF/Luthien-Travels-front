@@ -1,5 +1,5 @@
-import Styles from './Home.module.css'
-import Comments from '../Comments/Comments';
+//import Styles from './Home.module.css'
+//import Comments from '../Comments/Comments';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
 
     useEffect(() => {
   
-  imageContainer = document.getElementById("myImagesContainer");
+  /*imageContainer = document.getElementById("myImagesContainer");
 }, []);
 
     useEffect(()=>{
@@ -44,7 +44,7 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }
+    }*/
     return (
           <div>
              <h1> PAGINA SUSPENDIDA. CONTACTE AL ADMINISTRADOR. SURENIA IT® </h1>
