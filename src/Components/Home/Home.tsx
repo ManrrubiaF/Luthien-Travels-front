@@ -4,11 +4,11 @@ import { useEffect } from 'react';
 
 export default function Home() {
 
-    let imageContainer;
+    /*let imageContainer;
 
     useEffect(() => {
   
-  /*imageContainer = document.getElementById("myImagesContainer");
+  imageContainer = document.getElementById("myImagesContainer");
 }, []);
 
     useEffect(()=>{
