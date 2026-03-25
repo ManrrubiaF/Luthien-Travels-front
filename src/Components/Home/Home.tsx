@@ -45,8 +45,13 @@ export default function Home() {
             setInterval(nextImage, 4000);
         }
     }
-
     return (
+          <div>
+             <h1> PAGINA SUSPENDIDA. CONTACTE AL ADMINISTRADOR. SURENIA IT® </h1>
+          </div>
+)}
+
+/*    return (
         <div className={Styles.divMayor}>
             <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='perra en camioneta' />
@@ -81,3 +86,4 @@ export default function Home() {
         </div>
     )
 }
+*/
