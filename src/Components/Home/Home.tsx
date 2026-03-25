@@ -1,6 +1,6 @@
 //import Styles from './Home.module.css'
 //import Comments from '../Comments/Comments';
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 
 export default function Home() {
 
