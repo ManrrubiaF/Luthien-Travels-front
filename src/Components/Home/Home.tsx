@@ -7,18 +7,16 @@ export default function Home() {
     let imageContainer;
 
     useEffect(() => {
-  
-  imageContainer = document.getElementById("myImagesContainer");
-}, []);
+        imageContainer = document.getElementById("myImagesContainer");
+    }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(imageContainer);
-            handleCarousel();
-        
-    },[imageContainer])
+        handleCarousel();
+    }, [imageContainer])
 
     const handleCarousel = () => {
-        
+
         if (imageContainer) {
             const images = Array.from(imageContainer.querySelectorAll('img')) as HTMLImageElement[];
             console.log('images', images)
@@ -44,14 +42,17 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }  
-     return(   <div className={Styles.divMayor}>
+    }
+
+    return (
+        <div className={Styles.divMayor}>
             <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='perra en camioneta' />
                 <img src='/assets/images/camioneta.webp' alt='unidad de traslado de mascota' />
                 <img src='/assets/images/camioneta-abierta.webp' alt='unidad de traslado perros' />
                 <img src='/assets/images/camioneta-ab-2.webp' alt='perros en camioneta' />
             </div>
+
             <div className={Styles.allContainer}>
                 <div className={Styles.detailsContainer}>
                     <div className={Styles.detail}>
@@ -69,12 +70,16 @@ export default function Home() {
                 </div>
                 <Comments />                
             </div>
+
             <footer className={Styles.footer}>
                 <p> Powered by Surenia IT®</p>
                 <p> Buenos Aires - Argentina.</p>
             </footer>
+
             <div className={Styles.whatsappContainer}>
-                <a href='https://wa.me/541170672461' target='Blank'><img src='/assets/icons/whatsapp.svg' alt='whatsapp icon' className={Styles.whatsapp} /></a>
+                <a href='https://wa.me/541170672461' target='Blank'>
+                    <img src='/assets/icons/whatsapp.svg' alt='whatsapp icon' className={Styles.whatsapp} />
+                </a>
             </div>
         </div>
     )
