@@ -44,7 +44,8 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }  return(   <div className={Styles.divMayor}>
+    }  
+     return(   <div className={Styles.divMayor}>
             <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='perra en camioneta' />
                 <img src='/assets/images/camioneta.webp' alt='unidad de traslado de mascota' />
