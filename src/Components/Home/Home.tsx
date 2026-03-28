@@ -1,10 +1,10 @@
-//import Styles from './Home.module.css'
-//import Comments from '../Comments/Comments';
-//import { useEffect } from 'react';
+import Styles from './Home.module.css'
+import Comments from '../Comments/Comments';
+import { useEffect } from 'react';
 
 export default function Home() {
 
-    /*let imageContainer;
+    let imageContainer;
 
     useEffect(() => {
   
@@ -44,15 +44,7 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }*/
-    return (
-          <div>
-             <h1> PAGINA SUSPENDIDA. CONTACTE AL ADMINISTRADOR. SURENIA IT® </h1>
-          </div>
-)}
-
-/*    return (
-        <div className={Styles.divMayor}>
+    }      <div className={Styles.divMayor}>
             <div id='myImagesContainer' className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='perra en camioneta' />
                 <img src='/assets/images/camioneta.webp' alt='unidad de traslado de mascota' />
@@ -86,4 +78,3 @@ export default function Home() {
         </div>
     )
 }
-*/
