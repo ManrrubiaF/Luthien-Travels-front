@@ -64,7 +64,7 @@ export default function Comments() {
       error.text = "";
     }
     return error;
-  }, [Data, errors]);
+  }, [Data]);
 
   useEffect(() => {
     const resultForm = validation();
