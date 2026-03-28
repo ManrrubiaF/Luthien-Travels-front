@@ -3,14 +3,14 @@ import Comments from '../Comments/Comments';
 import { useEffect, useRef } from 'react';
 
 export default function Home() {
-    // Usamos useRef para mantener la referencia al contenedor
+   
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const container = document.getElementById("myImagesContainer");
         imageContainerRef.current = container;
 
-        // Lógica del carousel dentro del useEffect
+       
         if (container) {
             const images = Array.from(container.querySelectorAll('img')) as HTMLImageElement[];
             console.log('images', images)
@@ -36,7 +36,7 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }, []); // no dependencias necesarias
+    }, []); 
 
     return (
         <div className={Styles.divMayor}>
