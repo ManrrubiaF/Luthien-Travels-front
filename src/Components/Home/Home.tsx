@@ -1,24 +1,18 @@
 import Styles from './Home.module.css'
 import Comments from '../Comments/Comments';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
-
-    let imageContainer;
-
-    useEffect(() => {
-        imageContainer = document.getElementById("myImagesContainer");
-    }, []);
+    // Usamos useRef para mantener la referencia al contenedor
+    const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        console.log(imageContainer);
-        handleCarousel();
-    }, [imageContainer])
+        const container = document.getElementById("myImagesContainer");
+        imageContainerRef.current = container;
 
-    const handleCarousel = () => {
-
-        if (imageContainer) {
-            const images = Array.from(imageContainer.querySelectorAll('img')) as HTMLImageElement[];
+        // Lógica del carousel dentro del useEffect
+        if (container) {
+            const images = Array.from(container.querySelectorAll('img')) as HTMLImageElement[];
             console.log('images', images)
             let currentIndex = 0;
 
@@ -42,11 +36,11 @@ export default function Home() {
             updateSlider();
             setInterval(nextImage, 4000);
         }
-    }
+    }, []); // no dependencias necesarias
 
     return (
         <div className={Styles.divMayor}>
-            <div id='myImagesContainer' className={Styles.imagesContainer}>
+            <div id='myImagesContainer' ref={imageContainerRef} className={Styles.imagesContainer}>
                 <img src='/assets/images/greta.webp' alt='perra en camioneta' />
                 <img src='/assets/images/camioneta.webp' alt='unidad de traslado de mascota' />
                 <img src='/assets/images/camioneta-abierta.webp' alt='unidad de traslado perros' />
@@ -57,23 +51,30 @@ export default function Home() {
                 <div className={Styles.detailsContainer}>
                     <div className={Styles.detail}>
                         <h2>¿Quiénes Somos?</h2>
-                        <p>Nos dedicamos de forma exclusiva al traslado de mascotas. Nuestra pasión por los animales nos impulsa a brindar un servicio seguro y cómodo para que tus queridos compañeros peludos viajen con tranquilidad, al igual que sus dueños. Por qué dedicarnos al traslado de mascotas de forma exclusiva? Simplemente porque amamos a los animales tanto como seguramente vos lo haces.</p>
+                        <p>
+                            Nos dedicamos de forma exclusiva al traslado de mascotas. Nuestra pasión por los animales nos impulsa a brindar un servicio seguro y cómodo para que tus queridos compañeros peludos viajen con tranquilidad, al igual que sus dueños. Por qué dedicarnos al traslado de mascotas de forma exclusiva? Simplemente porque amamos a los animales tanto como seguramente vos lo haces.
+                        </p>
                     </div>
                     <div className={Styles.detail}>
                         <h2>¿Nuestro Propósito?</h2>
-                        <p>Nuestro propósito es garantizar que tus mascotas reciban el mejor cuidado durante sus desplazamientos. Nos enorgullece ofrecer un servicio confiable y amigable que se adapta a las necesidades de perros de todas las razas y temperamentos, siempre priorizando su bienestar.</p>
+                        <p>
+                            Nuestro propósito es garantizar que tus mascotas reciban el mejor cuidado durante sus desplazamientos. Nos enorgullece ofrecer un servicio confiable y amigable que se adapta a las necesidades de perros de todas las razas y temperamentos, siempre priorizando su bienestar.
+                        </p>
                     </div>
                     <div className={Styles.detail}>
                         <h2>Lo Que Te Ofrecemos</h2>
-                        <p>En Luthien Pet Travels, ofrecemos un servicio exclusivo con unidades equipadas con doble puerta lateral y asientos traseros triplaza. Aceptamos perros de todos los tamaños, razas y personalidades, siempre y cuando sean amigables. Para perros que puedan mostrar agresividad, exigimos el uso de correa y bozal por razones de seguridad del conductor.</p>
+                        <p>
+                            En Luthien Pet Travels, ofrecemos un servicio exclusivo con unidades equipadas con doble puerta lateral y asientos traseros triplaza. Aceptamos perros de todos los tamaños, razas y personalidades, siempre y cuando sean amigables. Para perros que puedan mostrar agresividad, exigimos el uso de correa y bozal por razones de seguridad del conductor.
+                        </p>
                     </div>
                 </div>
-                <Comments />                
+
+                <Comments />
             </div>
 
             <footer className={Styles.footer}>
-                <p> Powered by Surenia IT®</p>
-                <p> Buenos Aires - Argentina.</p>
+                <p>Powered by Surenia IT®</p>
+                <p>Buenos Aires - Argentina.</p>
             </footer>
 
             <div className={Styles.whatsappContainer}>
@@ -82,5 +83,5 @@ export default function Home() {
                 </a>
             </div>
         </div>
-    )
+    );
 }
